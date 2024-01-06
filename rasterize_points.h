@@ -16,7 +16,7 @@
 #include <string>
 	
 std::tuple<int, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor>
-RasterizeGaussiansCUDA(
+RasterizeMipsCUDA(
 	const torch::Tensor& background,
 	const torch::Tensor& means3D,
     const torch::Tensor& colors,
@@ -40,7 +40,7 @@ RasterizeGaussiansCUDA(
 	const bool debug);
 
 std::tuple<torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor>
- RasterizeGaussiansBackwardCUDA(
+ RasterizeMipsBackwardCUDA(
  	const torch::Tensor& background,
 	const torch::Tensor& means3D,
 	const torch::Tensor& radii,
